@@ -27,7 +27,7 @@ GitHub Action that sets up [gdvm](https://github.com/adalinesimonian/gdvm), the 
 steps:
   - uses: adalinesimonian/setup-gdvm@v1
 
-  - run: gdvm install 4.5 --yes
+  - run: gdvm install 4.5
   - run: godot --version
 ```
 
