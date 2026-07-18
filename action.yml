@@ -1,0 +1,54 @@
+# SPDX-FileCopyrightText: Copyright (C) 2026 Adaline Simonian
+# SPDX-License-Identifier: GPL-3.0-or-later
+#
+# This file is part of gdvm.
+#
+# gdvm is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later
+# version.
+#
+# gdvm is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR
+# A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along with
+# this program. If not, see <https://www.gnu.org/licenses/>.
+
+name: Setup gdvm
+description: Install gdvm, the Godot version manager.
+author: Adaline Simonian
+branding:
+  icon: download
+  color: purple
+
+inputs:
+  version:
+    description: The gdvm version to install. Defaults to "latest".
+    required: false
+    default: latest
+  architecture:
+    description: >-
+      The target architecture to install gdvm for, e.g. "i686", "x86_64", or
+      "aarch64". Useful to run, for example, 32-bit gdvm on a 64-bit runner.
+      Defaults to the runner's architecture.
+    required: false
+    default: ""
+  releases-url:
+    description: >-
+      Advanced. Override the gdvm releases manifest URL, e.g. for a mirror
+      or in tests. Defaults to the official gdvm registry.
+    required: false
+    default: ""
+
+outputs:
+  gdvm-version:
+    description: The exact gdvm version that was installed.
+  gdvm-path:
+    description: The absolute path to the installed gdvm binary.
+  cache-hit:
+    description: Whether the binary came from the runner tool cache.
+
+runs:
+  using: node24
+  main: src/main.ts

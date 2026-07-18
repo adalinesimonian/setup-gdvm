@@ -1,0 +1,27 @@
+{
+  "name": "setup-gdvm",
+  "version": "0.0.0",
+  "private": true,
+  "description": "GitHub Action that sets up gdvm, the Godot version manager",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "test": "node --test \"tests/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "oxfmt": "^0.59.0",
+    "oxlint": "^1.74.0",
+    "oxlint-tsgolint": "^0.25.0",
+    "typescript": "^7.0.2"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "yarn@4.17.1"
+}

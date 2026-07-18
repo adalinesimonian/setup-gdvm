@@ -1,0 +1,6 @@
+{
+  "editor.rulers": [80, 120],
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+  "oxc.path.tsgolint": "node_modules/oxlint-tsgolint/bin/tsgolint.js"
+}
